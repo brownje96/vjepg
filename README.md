@@ -22,7 +22,7 @@ You are being licensed these support files. I have no claims to the intellectual
 
 ## Volumes, Optional.
 |name|destination|purpose|
-|----------|----------|
+|----------|----------|----------|
 |/music/|Music|...music.
 |my_theme.json|/my_theme.json|Your custom JSON theme. As described below.|
 
