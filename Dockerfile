@@ -11,4 +11,4 @@ ENV XMLTV_SRC=""
 ENV XMLTV_TZ=""
 ENV EPG_THEME=""
 
-ENTRYPOINT echo python3 xmltv_guide_stream_v23.py --xmltv $XMLTV_SRC --tz $XMLTV_TZ $( [ -z "${EPG_THEME}" ] && echo || echo --theme $EPG_THEME ) $( [ -f /my_theme.json ] && echo --theme-file my_theme.json || echo ) --font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+ENTRYPOINT python3 xmltv_guide_stream_v23.py --xmltv $XMLTV_SRC ( [ -z "${XMLTV_TZ}" ] && echo || echo --tz $XMLTV_TZ ) $( [ -z "${EPG_THEME}" ] && echo || echo --theme $EPG_THEME ) $( [ -f /my_theme.json ] && echo --theme-file my_theme.json || echo ) --font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
