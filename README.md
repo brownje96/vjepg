@@ -4,6 +4,11 @@ Dockerfile and Compose File for VJ's XMLTV EPG
 ## Licensing Note
 You are being licensed these support files. I have no claims to the intellectual property of VJ's EPG. I am not redistributing it without his permission.
 
+## How to use
+Obtain VJ's EPG, add to the src directory. Make sure the filenames match in /src/ and the Dockerfile. Adjust your settings within `docker-compose.yml`. Then run with:
+
+`docker compose up -d --build`
+
 ## Required Environmental Variables
 |name|purpose|
 |----------|----------|
@@ -25,7 +30,6 @@ You are being licensed these support files. I have no claims to the intellectual
 |----------|----------|----------|
 |/music/|Music|...music.
 |my_theme.json|/my_theme.json|Your custom JSON theme. As described below.|
-
 
 ## JSON Theme Format
 ```
