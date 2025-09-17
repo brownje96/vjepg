@@ -1,0 +1,23 @@
+services:
+  programGuide:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: vjepg
+      ports:
+        - 8000:8000
+      volumes:
+#        - ./music:/music:ro
+#        - ./my_theme.json:/my_theme.json:ro
+      environment:
+        - XMLTV_SRC=YOUR_XMLTV_SOURCE_HERE
+        - XMLTV_TZ=YOUR_TIME_ZONE_HERE
+#        - EPG_THEME=
+      tmpfs:
+        - /cache_blocks:size=512M
+        - /hls_out:size=512M
+      restart: unless-stopped
+      deploy:
+        resources:
+          limits:
+            memory: 1536M
