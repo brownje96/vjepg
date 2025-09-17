@@ -1,5 +1,5 @@
 FROM debian:trixie
-RUN apt-get update -y; apt-get upgrade -y; apt dist-upgrade -y
+RUN apt-get update -y;
 RUN apt-get install ffmpeg python3 python3-pillow python3-requests fonts-dejavu-core -y
 WORKDIR /
 COPY src/ /
