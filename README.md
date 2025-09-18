@@ -1,3 +1,5 @@
+# **This repo is archived and no longer updated, please visit xmltv-guide-stream/xmltv-guide-stream instead **
+
 # vjepg
 Dockerfile and Compose File for VJ's XMLTV EPG
 
